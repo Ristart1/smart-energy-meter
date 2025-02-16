@@ -1,6 +1,6 @@
 async function fetchData() {
     const sheetURL = "https://docs.google.com/spreadsheets/d/1XfFaFAWLZHu8me2znEvmRC3rK8OMVrtSKg4GSZbOgjg/gviz/tq?tqx=out:json";
-    const response = await fetch(sheetURL);
+    const response = await fetch(https://script.google.com/macros/s/AKfycbx3t5-HScPodCggRzirSqeAdfTVUsDcjK05oEjFXCk5D1uiPHGzP3AS4lRpM4hdWdqM/exec);
     const text = await response.text();
     
     let jsonText = text.substring(text.indexOf('{'), text.lastIndexOf('}') + 1);
