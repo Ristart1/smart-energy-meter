@@ -1,5 +1,5 @@
 async function fetchData() {
-    const sheetURL = "YOUR_GOOGLE_SHEETS_JSON_FEED_URL";
+    const sheetURL = "https://docs.google.com/spreadsheets/d/1XfFaFAWLZHu8me2znEvmRC3rK8OMVrtSKg4GSZbOgjg/gviz/tq?tqx=out:json";
     const response = await fetch(sheetURL);
     const text = await response.text();
     
