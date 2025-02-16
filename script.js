@@ -5,15 +5,17 @@ async function fetchData() {
         const response = await fetch(https://docs.google.com/spreadsheets/d/1XfFaFAWLZHu8me2znEvmRC3rK8OMVrtSKg4GSZbOgjg/edit?gid=0#gid=0);
         const text = await response.text();
 
-        // Extract JSON data correctly
+        console.log("Raw Response:", text); // Debugging log
+
         let jsonText = text.substring(text.indexOf('{'), text.lastIndexOf('}') + 1);
         const data = JSON.parse(jsonText);
 
-        // Debugging: Check if data exists
-        console.log("Fetched Data:", data);
+        console.log("Parsed Data:", data); // Debugging log
 
         if (!data.table || !data.table.rows) {
-            throw new Error("Invalid data format: No table or rows found");
+            console.warn("No data found in Google Sheets.");
+            document.getElementById("dataTable").innerHTML = "No data available.";
+            return;
         }
 
         let timestamps = [];
@@ -26,7 +28,7 @@ async function fetchData() {
                 return;
             }
 
-            let timestamp = row.c[0]?.v || "N/A";
+            let timestamp = row.c[0]?.f || "N/A"; // Use 'f' field for human-readable date
             let voltage = row.c[1]?.v || 0;
             let current1 = row.c[2]?.v || 0;
             let current2 = row.c[3]?.v || 0;
@@ -55,3 +57,5 @@ async function fetchData() {
         document.getElementById("dataTable").innerHTML = "Error loading data. Check Console.";
     }
 }
+
+window.onload = fetchData;
