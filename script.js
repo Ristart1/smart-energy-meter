@@ -1,4 +1,4 @@
-const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQEAl5IM4a7jpC8heq8feTrKD1lOE3bY2tgkATvgqR_qCqLYvSP65l1tcSsKao9l-LsM98auw4Vg_oh/pub?output=csv";  // Replace with your Google Sheets CSV URL
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbyXzvFmsY0_Po3HEFvE8UICnAFDJmFhFjVTz7ZMTEvxPZtZrOHG7UmW6K05oX4t99_Z/exec";  // Replace with your Google Sheets CSV URL
 
 async function fetchData() {
     try {
