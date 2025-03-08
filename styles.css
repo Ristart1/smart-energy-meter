@@ -1,0 +1,28 @@
+body { 
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    background-color: #f4f4f4; 
+    margin: 0; 
+    padding: 20px; 
+}
+h1 { 
+    color: #333; 
+}
+.alert { 
+    color: red; 
+    font-size: 18px; 
+    font-weight: bold; 
+    margin: 10px; 
+}
+#data-container {
+    background: white;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+p {
+    font-size: 18px;
+    margin: 5px 0;
+}
